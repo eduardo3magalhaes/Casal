@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Casal</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <ul>
+        <li  class="active"><a href="index.html"><ion-icon name="home"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="images"></ion-icon></a></li>
+        <li><a href="pag3.html"><ion-icon name="gift"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="happy"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="compass"></ion-icon></a></li>
+        <div id="marker"></div>
+    </ul>
+    
+        <script src="casal.js"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script>
+            let marker= document.querySelector('#marker');
+            let list= document.querySelectorAll('ul li');
+            function moveIndicator(e){
+                marker.style.left= e.offsetLeft+'px';
+                marker.style.width= e.offsetLeft+'px';
+            }
+            list.forEach(link =>{
+                link.addEventListener('mousemove', (e)=>{
+                    moveIndicator(e.target);
+                })
+            })
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+            item.addEventListener('mouseover',activeLink));
+        </script>
+</body>
+</html>

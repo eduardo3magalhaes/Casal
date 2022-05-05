@@ -1,0 +1,124 @@
+   *
+   { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body
+    {
+    min-height: 100vh;
+    background: rgb(241, 235, 235);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+    span{
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    animation: fadeInOut 1s linear infinite;
+    }
+    @keyframes fadeInOut{
+        0%,100%{
+            opacity: 0;
+        }
+        20%,80%{
+            opacity: 1;
+        }
+    }
+    span::before{
+    content: '';
+    position: absolute;
+    width:50px;
+    height:50px;
+    background:url(heart.png);
+    background-size: cover; 
+    animation: moveShape 1s linear infinite;
+    }
+    @keyframes moveShape{
+        0%{
+            transform: translate(0) rotate(0deg);
+        }
+        100%{
+            transform: translate(300px) rotate(360deg);
+        }
+    }
+    ul{
+        position:absolute;
+        top: 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+
+    }
+    ul li{
+        list-style: none;
+
+    }
+    ul li a{
+        color: rgb(240, 7, 7);
+        position: relative;
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px 30px;
+        z-index: 1000;
+        backdrop-filter: blur(15px);
+    }
+    ul li a ion-icon{
+        font-size: 2.5em;
+        pointer-events: none;
+        opacity: 1.25;
+        transition: 0.25s;
+    }
+    ul li:active a ion-icon
+    {
+        opacity: 1;
+    }
+    #marker{
+        position:absolute;
+        top: 0;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    #marker::before
+    {
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(8);
+        width: 90px;
+        height: 20px;
+        border-radius: 8px;
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+    }
+   ul li:nth-child(1).active ~ #marker::before
+{
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+}
+ul li:nth-child(2).active ~ #marker::before
+{
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+}
+ul li:nth-child(3).active ~ #marker::before
+{
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+}
+ul li:nth-child(4).active ~ #marker::before
+{
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+}
+ul li:nth-child(5).active ~ #marker::before
+{
+        background: #ec5353;
+        box-shadow: 0 0 15px #ec5353, 0 0 30px #ec5353, 0 0 45px #ec5353, 0 0 60px #ec5353;
+}

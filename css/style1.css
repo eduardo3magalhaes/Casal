@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(35deg,#E989cf,#bbdff0);
+}
+.card{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.card:hover{
+    height: 450px;
+}
+.imgBox{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top:-50px;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+.card:hover .imgBox{
+    width: 250px;
+    height: 250px;
+}
+.imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+ }
+ .card .content .details{
+     padding: 40px;
+     text-align: center;
+     width: 100%;
+     transition: 0.5s;
+     transform:translateY(150px);
+ }
+ .card:hover .content .details{
+     transform: translateY(0px);
+
+ }
+ .card .content .details h2{
+    font-family: 'Lavishly Yours', cursive;
+     font-size: 2.5em;
+     font-weight: 600;
+     color: rgb(206, 166, 207);
+     line-height: 1.2em;
+     text-shadow: 0 5px 5px rgb(209, 207, 207);
+ }
+ .card .content .details h3{
+    padding: 40px;
+    font-size: 1.10em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.0em;
+ }
+ .card .content .details .actionBtn
+ {
+     display: flex;
+     justify-content: center;
+
+ }
+ .card .content .details .actionBtn button
+ {
+     
+    font-family: 'Lavishly Yours', cursive;
+    padding: 10px 30px;
+     border-radius: 5px;
+     border: none;
+     outline: none;
+     font-size: 1em;
+     font-weight: 500;
+     background: rgb(205, 170, 206);
+     color: #fff;
+     cursor:pointer;
+
+ }
+ 
+ 
+ 
